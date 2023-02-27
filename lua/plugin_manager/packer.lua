@@ -51,5 +51,6 @@ return require('packer').startup(function(use)
 
 
     -- 6. Nvim-R
-    use 'jalvesaq/Nvim-R'
+    use 'jamespeapen/Nvim-R'
+
 end)

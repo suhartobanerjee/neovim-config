@@ -1,1 +1,0 @@
--- quit all buffers when R is runninei

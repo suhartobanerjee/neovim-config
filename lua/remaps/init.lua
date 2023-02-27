@@ -1,4 +1,4 @@
 require('remaps.editor')
 require('remaps.telescope')
 require('remaps.fugitive')
-require('remaps.nvim_R')
+require('remaps.nvim-R')
