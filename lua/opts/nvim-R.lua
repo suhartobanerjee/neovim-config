@@ -1,5 +1,5 @@
 -- set n lines for the console
-vim.g.R_rconsole_height = 25
+vim.g.R_rconsole_height = 30
 
 
 

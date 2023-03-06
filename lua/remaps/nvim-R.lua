@@ -11,7 +11,11 @@ function customNvimRMappings()
 
    vim.keymap.set({'n', 'v', 'i'}, '<localleader>l', '<Esc><Plug>RClearConsolei', {buffer = 0, remap = true})
 
+   -- Keymap to save the current plot to the tmp_plot loc
+   vim.keymap.set('i', '<localleader>ss', '<CR>ggsave(tmp_plot)')
+
    vim.keymap.set('n', '<leader>rz', ':qa!<CR>')
+
 end
 
 
