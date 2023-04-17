@@ -7,7 +7,6 @@ vim.keymap.set("n", "<leader>gp", function()
     vim.cmd.Git('push')
 end, opts)
 
--- rebase always for pull
-vim.keymap.set("n", "<leader>P", function()
+vim.keymap.set("n", "<leader>gP", function()
     vim.cmd.Git({'pull', '--rebase'})
 end, opts)
