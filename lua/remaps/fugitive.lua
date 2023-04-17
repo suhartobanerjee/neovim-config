@@ -10,3 +10,8 @@ end, opts)
 vim.keymap.set("n", "<leader>gP", function()
     vim.cmd.Git({'pull', '--rebase'})
 end, opts)
+
+
+vim.keymap.set("n", "<leader>gl", function()
+    vim.cmd.Git({'log', '--raw'})
+end, opts)
