@@ -1,7 +1,5 @@
 -- set n lines for the console
-vim.g.R_rconsole_height = 30
-
-
+vim.g.R_rconsole_height = 25
 
 -- Commenting is enabled
 vim.g.R_enable_comment = 1
@@ -22,4 +20,6 @@ vim.g.R_assign_map = '<localleader>-'
 
 -- to always split horizontally
 -- the console
-vim.g.R_rconsole_width = 0
+vim.g.R_rconsole_width = 0   
+
+

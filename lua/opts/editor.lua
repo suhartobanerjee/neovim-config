@@ -60,3 +60,4 @@ vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 -- line at col 80
 --vim.opt.colorcolumn = '80'
+
