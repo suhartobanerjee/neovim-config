@@ -17,7 +17,7 @@ function customNvimRMappings()
    vim.keymap.set('n', '<leader>rz', ':qa!<CR>')
 
    -- keymap to write traceback(), run it and then delete the line
-   vim.keymap.set('i', '<localleader>t', 'traceback()<Esc><Plug>RSendLineS')
+   vim.keymap.set('i', '<localleader>tb', 'traceback()<Esc><Plug>RSendLineS')
 
 end
 
