@@ -53,4 +53,11 @@ return require('packer').startup(function(use)
     -- 6. Nvim-R
     use 'jamespeapen/Nvim-R'
 
+    
+    --7. lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
 end)
