@@ -53,11 +53,16 @@ return require('packer').startup(function(use)
     -- 6. Nvim-R
     use 'jamespeapen/Nvim-R'
 
-    
     --7. lualine
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    -- 8. nvim-autopairs
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
     }
 
 end)

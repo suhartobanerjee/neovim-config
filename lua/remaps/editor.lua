@@ -2,12 +2,12 @@ vim.g.mapleader = " "
 
 
 -- Autocomplete braces and inverted commas
-vim.keymap.set('i', '{', '{}<Esc>ha')
-vim.keymap.set('i', '(', '()<Esc>ha')
-vim.keymap.set('i', '[', '[]<Esc>ha')
-vim.keymap.set('i', '\"', '\"\"<Esc>ha')
-vim.keymap.set('i', '\'', '\'\'<Esc>ha')
-vim.keymap.set('i', '`', '``<Esc>ha')
+-- vim.keymap.set('i', '{', '{}<Esc>ha')
+-- vim.keymap.set('i', '(', '()<Esc>ha')
+-- vim.keymap.set('i', '[', '[]<Esc>ha')
+-- vim.keymap.set('i', '\"', '\"\"<Esc>ha')
+-- vim.keymap.set('i', '\'', '\'\'<Esc>ha')
+-- vim.keymap.set('i', '`', '``<Esc>ha')
 
 local opts = {silent = true}
 
