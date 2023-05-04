@@ -20,12 +20,18 @@ function customNvimRMappings()
    vim.keymap.set('i', '<localleader>tb', 'traceback()<Esc><Plug>RSendLineS')
 
    -- keymap to comment multiple lines
-   vim.keymap.set('v', '<localleader>cb', ':s/^/# /<CR>:noh<CR>', {silent = true})
+   vim.keymap.set('v', '<localleader>cb', ':norm i# <CR>', {silent = true})
 
    -- keymap to uncomment multiple lines
    vim.keymap.set('v', '<localleader>ub', ':s/^# //<CR>:noh<CR>', {silent = true})
 
+    -- keymap to format and reload the file
+    -- vim.keymap.set('n', '<localleader>ff', "ilibrary(styler)<Esc><Plug>RSendLineSstyle_file(<C-o>:put ==expand('%p')<CR>, indent_by=4)<CR><Esc>dk")
+
+
 end
+
+
 
 
 
