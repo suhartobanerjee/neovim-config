@@ -32,3 +32,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- show the opened buffers
 vim.keymap.set('n', '<leader>ll', ':ls<CR>', opts)
+
+
+-- capture selection within "" 
+vim.keymap.set('n', '<leader>cc', 'ciw""<Esc>P')

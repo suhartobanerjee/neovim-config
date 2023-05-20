@@ -1,5 +1,5 @@
 -- set n lines for the console
-vim.g.R_rconsole_height = 25
+vim.g.R_rconsole_height = 20
 
 -- Commenting is enabled
 vim.g.R_enable_comment = 1
