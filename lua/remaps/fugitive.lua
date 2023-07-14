@@ -10,5 +10,5 @@ vim.keymap.set("n", "<leader>gP", function()
 end)
 
 vim.keymap.set("n", "<leader>gl", function()
-    vim.cmd.Git('log --raw')
+    vim.cmd.Git('log --graph --all --decorate --raw')
 end)
