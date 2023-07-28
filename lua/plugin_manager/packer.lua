@@ -65,4 +65,8 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
+    
+    use 'jpalardy/vim-slime'
+    use 'hanschen/vim-ipython-cell'
+
 end)

@@ -36,3 +36,7 @@ vim.keymap.set('n', '<leader>ll', ':ls<CR>', opts)
 
 -- capture selection within "" 
 vim.keymap.set('n', '<leader>cc', 'ciw""<Esc>P')
+
+
+-- use esc to come to normal mode in terminal
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n><CR>')
