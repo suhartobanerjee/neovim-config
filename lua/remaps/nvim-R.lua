@@ -25,6 +25,9 @@ function customNvimRMappings()
    -- keymap to uncomment multiple lines
    vim.keymap.set('v', '<localleader>ub', ':s/^# //<CR>:noh<CR>', {silent = true})
 
+   -- keymap to stop R
+   vim.keymap.set({'n', 'v', 'i'}, '<localleader>rx', '<Esc>:RStop<CR>', {silent = true})
+
     -- keymap to format and reload the file
     -- vim.keymap.set('n', '<localleader>ff', "ilibrary(styler)<Esc><Plug>RSendLineSstyle_file(<C-o>:put ==expand('%p')<CR>, indent_by=4)<CR><Esc>dk")
 
