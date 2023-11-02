@@ -15,11 +15,10 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- 2. onedark colorscheme
-    use 'navarasu/onedark.nvim'
-
     -- 3. treesitter
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {
+        'nvim-treesitter/nvim-treesitter',
+    }
 
     -- 4. Git wrapper
     use 'tpope/vim-fugitive'
