@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
 
 
     -- 6. Nvim-R
-    use 'jamespeapen/Nvim-R'
+    use 'jalvesaq/Nvim-R'
 
     --7. lualine
     use {
