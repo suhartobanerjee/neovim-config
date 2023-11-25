@@ -6,10 +6,12 @@ function customPythonMappings()
 
     local opts = {silent = true}
     vim.keymap.set({'n', 'i', 'v'}, '<localleader>cf', '<Esc>:SlimeConfig<CR>')
-    vim.keymap.set({'n', 'i', 'v'}, '<localleader><CR>', '<Esc>:lua SendIndentedBlock()<CR>i')
+    vim.keymap.set({'n', 'i', 'v'}, '<localleader><CR>', '<Esc>:lua sendIndentedBlock()<CR>i')
+    vim.keymap.set({'n', 'i', 'v'}, '<localleader>ff', '<Esc>:lua sendFunctionBlock()<CR>i')
 end
 
-function SendIndentedBlock()
+
+function sendIndentedBlock()
     -- Get the current line number and its indentation level
     local current_line = vim.fn.line('.')
     local current_indent = vim.fn.indent(current_line)
@@ -44,6 +46,36 @@ function SendIndentedBlock()
     end_line = end_line + 1
     vim.fn.execute(end_line)
 end
+
+
+function sendFunctionBlock()
+    -- Get the current line number and its indentation level
+    local current_line = vim.fn.line('.')
+    local current_indent = vim.fn.indent(current_line)
+    local end_line = current_line
+
+    -- setting starting marker after removing previous marks
+    vim.cmd("delm PN")
+    vim.cmd("mark P")
+
+    -- checking if two consecutive lines are empty
+    -- to signal the end of the function
+    while end_line < vim.fn.line('$') do
+        if (vim.fn.indent(end_line + 1) == current_indent and 
+            vim.fn.indent(end_line + 2) == current_indent) then
+           vim.fn.execute(end_line)
+           vim.cmd("mark N")
+           break
+        end
+        end_line = end_line + 1
+    end
+
+    -- sending to slime and moving to the 
+    -- line + 3 to start typing
+    vim.cmd("'P,'NSlimeSend")
+    vim.fn.execute(end_line + 3)
+end
+
 
 -- Set these shortcuts only for r buffers
 vim.api.nvim_create_augroup('slimePython', {clear = true})
