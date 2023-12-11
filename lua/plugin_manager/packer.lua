@@ -66,7 +66,6 @@ return require('packer').startup(function(use)
 
     -- 9. to use ipython in vim    
     use 'jpalardy/vim-slime'
-    use 'hanschen/vim-ipython-cell'
 
     -- 10. tokyonight theme
     use 'folke/tokyonight.nvim'
