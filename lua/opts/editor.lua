@@ -61,3 +61,14 @@ vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 -- line at col 80
 --vim.opt.colorcolumn = '80'
 
+-- set snakemake filetype when opening snakefile
+vim.filetype.add({
+    filename = {
+        ['snakefile'] = 'snakemake',
+        ['Snakefile'] = 'snakemake',
+    },
+    extension = {
+        smk = 'snakemake',
+    },
+})
+
