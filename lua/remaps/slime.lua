@@ -7,6 +7,7 @@ function customPythonMappings()
     local opts = {silent = true}
     vim.keymap.set({'n', 'i', 'v'}, '<localleader>cf', '<Esc>:SlimeConfig<CR>')
     vim.keymap.set({'n', 'i', 'v'}, '<localleader><CR>', '<Esc>:lua sendIndentedBlock()<CR>i')
+    vim.keymap.set('v', '<localleader><CR>', ":'<,'>SlimeSend<CR>i")
     vim.keymap.set({'n', 'i', 'v'}, '<localleader>ff', '<Esc>:lua sendFunctionBlock()<CR>i')
 end
 
