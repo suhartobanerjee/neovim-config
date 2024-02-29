@@ -5,9 +5,9 @@ function customNvimRMappings()
 
    vim.keymap.set({'n', 'v', 'i'}, '<localleader>cc', '<Esc><Plug>REDSendChunki', {buffer = 0, remap = true})
 
-   vim.keymap.set({'n', 'v', 'i'}, '<localleader>cn', '<Esc><Plug>RNextRChunki', {buffer = 0, remap = true})
+   vim.keymap.set({'n', 'v', 'i'}, '<localleader>cn', '<Esc><Plug>RNextRChunk', {buffer = 0, remap = true})
 
-   vim.keymap.set({'n', 'v', 'i'}, '<localleader>cp', '<Esc><Plug>RPreviousRChunki', {buffer = 0, remap = true})
+   vim.keymap.set({'n', 'v', 'i'}, '<localleader>cp', '<Esc><Plug>RPreviousRChunk', {buffer = 0, remap = true})
 
    vim.keymap.set({'n', 'v', 'i'}, '<localleader>m',  ' %>% ', {buffer = 0, remap = true}) 
 
@@ -48,6 +48,6 @@ end
 vim.api.nvim_create_augroup('myNvimR', {clear = true})
 vim.api.nvim_create_autocmd('Filetype', {
     callback = function() customNvimRMappings() end,
-    pattern = {'R', 'r', 'Rmd'},
+    pattern = {'R', 'r', 'Rmd', 'rmd'},
     group = 'myNvimR'
 })
