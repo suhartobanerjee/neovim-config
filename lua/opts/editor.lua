@@ -72,3 +72,5 @@ vim.filetype.add({
     },
 })
 
+
+vim.opt.foldmethod = "indent"

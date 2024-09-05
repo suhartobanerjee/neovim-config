@@ -2,7 +2,7 @@ function customPythonMappings()
     vim.g.maplocalleader = "\\"
 
     -- to split and open terminal
-    vim.keymap.set('n', '<localleader>ps', '<C-W>23s<C-W>j:term<CR>iconda activate $CDE<CR>ipython<CR><C-\\><C-n><C-W>k:SlimeConfig<CR><CR>')
+    vim.keymap.set('n', '<localleader>ps', '<C-W>32s<C-W>j:term<CR>iconda activate $CDE<CR>ipython<CR><C-\\><C-n><C-W>k:SlimeConfig<CR><CR>')
 
     local opts = {silent = true}
     vim.keymap.set({'n', 'i', 'v'}, '<localleader>cf', '<Esc>:SlimeConfig<CR>')
