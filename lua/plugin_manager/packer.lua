@@ -73,4 +73,7 @@ return require('packer').startup(function(use)
     -- 10. tokyonight theme
     use 'folke/tokyonight.nvim'
 
+    -- 11. gruvbox
+    use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
+
 end)
